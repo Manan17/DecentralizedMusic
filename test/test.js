@@ -48,6 +48,48 @@ contract('Decentragram', ([deployer, author, tipper]) => {
       await decentragram.uploadImage('','Desc',{from : author}).should.be.rejected;
       await decentragram.uploadImage('Hash','',{from : author}).should.be.rejected;
     })
+
+    it('list images' , async () => {
+      const image = await decentragram.images(imageCount);
+      assert.equal(image.id.toNumber(),imageCount.toNumber(),'id is correct');
+      assert.equal(image.hash,hash,'Hash is correct');
+      assert.equal(image.description, 'Desc','description is correct' );
+      assert.equal(image.tipAmount, 0,'tip amount is correct');
+      assert.equal(image.author, author, 'author is correct');
+    })
+
+    it('allows users to tip images', async () => {
+      
+      let oldAuthorBalance
+      oldAuthorBalance = await web3.eth.getBalance(author)
+      oldAuthorBalance = new web3.utils.BN(oldAuthorBalance)
+
+      result = await decentragram.tipImageOwner(imageCount, { from: tipper, value: web3.utils.toWei('1', 'Ether') })
+
+      
+      const event = result.logs[0].args
+      assert.equal(event.id.toNumber(), imageCount.toNumber(), 'id is correct')
+      assert.equal(event.hash, hash, 'Hash is correct')
+      assert.equal(event.description, 'Desc', 'description is correct')
+      assert.equal(event.tipAmount, '1000000000000000000', 'tip amount is correct')
+      assert.equal(event.author, author, 'author is correct')
+
+      
+      let newAuthorBalance
+      newAuthorBalance = await web3.eth.getBalance(author)
+      newAuthorBalance = new web3.utils.BN(newAuthorBalance)
+
+      let tipImageOwner
+      tipImageOwner = web3.utils.toWei('1', 'Ether')
+      tipImageOwner = new web3.utils.BN(tipImageOwner)
+
+      const expectedBalance = oldAuthorBalance.add(tipImageOwner)
+
+      assert.equal(newAuthorBalance.toString(), expectedBalance.toString())
+
+      
+      await decentragram.tipImageOwner(99, { from: tipper, value: web3.utils.toWei('1', 'Ether')}).should.be.rejected;
+    })
   })
 
 })
