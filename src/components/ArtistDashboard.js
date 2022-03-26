@@ -4,7 +4,7 @@ import './ArtistDashboard.css';
 export default function ArtistDashboard() {
   return (
     <>
-      <div ClassName="wrapper-row">
+      <div className="wrapper-row">
         <div className="wrapper-column">
           <Card className="card">
             <Card.Body className="card-body">

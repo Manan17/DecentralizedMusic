@@ -3,7 +3,7 @@ import { Form, Button, Card, Alert } from 'react-bootstrap';
 import { useAuth } from '../contexts/AuthContext';
 import { Link, useHistory } from 'react-router-dom';
 
-export default function Login() {
+export default function ArtistLogin() {
   const emailRef = useRef();
   const passwordRef = useRef();
   const { login } = useAuth();
@@ -18,7 +18,7 @@ export default function Login() {
       setError('');
       setLoading(true);
       await login(emailRef.current.value, passwordRef.current.value);
-      history.push('/');
+      history.push('/ArtistDashboard');
     } catch {
       setError('Failed to log in');
     }
@@ -42,10 +42,7 @@ export default function Login() {
               <Form.Control type="password" ref={passwordRef} required />
             </Form.Group>
             <Button disabled={loading} className="w-100" type="submit">
-              Log In as User
-            </Button>
-            <Button className="w-100 text-center mt-3">
-              <Link to="/Artist-Login">Artist Login</Link>
+              Log In as Aritst
             </Button>
           </Form>
           <div className="w-100 text-center mt-3">

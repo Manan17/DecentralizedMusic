@@ -9,9 +9,9 @@ import PrivateRoute from './PrivateRoute';
 import ForgotPassword from './ForgotPassword';
 import UpdateProfile from './UpdateProfile';
 import UserDashboard from './UserDashboard';
+import ArtistLogin from './ArtistLogin';
 
 import ArtistDashboard from './ArtistDashboard';
-import UserDashboard from './UserDashboard';
 function App() {
   return (
     <Container
@@ -22,12 +22,16 @@ function App() {
         <Router>
           <AuthProvider>
             <Switch>
-              <PrivateRoute exact path="/" component={ArtistDashboard} />
+              <PrivateRoute exact path="/Dashboard" component={UserDashboard} />
               <PrivateRoute path="/update-profile" component={UpdateProfile} />
-              <Route path="/yuvraj" component={UserDashboard} />
+              <PrivateRoute
+                path="/ArtistDashboard"
+                component={ArtistDashboard}
+              />
               <Route path="/signup" component={Signup} />
               <Route path="/login" component={Login} />
               <Route path="/forgot-password" component={ForgotPassword} />
+              <Route path="/Artist-Login" component={ArtistLogin} />
             </Switch>
           </AuthProvider>
         </Router>
