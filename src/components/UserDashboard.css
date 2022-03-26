@@ -1,16 +1,20 @@
-.container {
-    margin: 0;
-    background-color: #ffff;
-}
-.navbar {
+
+.carousel{
+    height: 10fr;
+    width: 65%;
+    
+    display: block;
+    margin-right: 30%;
+    margin-left: auto;
     background-color: black;
+    border-radius: 20px;
 }
-.Bottom-container{
-    background-color: black;
+
+.card{
+    margin: 5%;
 }
-.user-dashboard{
-    background-color: black;
+
+#image{
+    width: 100%;
 }
-.container-right{
-    background-color: darkgray
-}
+
