@@ -1,0 +1,64 @@
+.mainContainer {
+  padding: 30px;
+}
+
+.profileImage {
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+}
+
+.topProfile {
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid lightgray;
+  padding-bottom: 20px;
+}
+
+.artistName {
+  margin-left: 20px;
+}
+
+.listnersNow {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.smallGraph {
+  width: 100px;
+  margin-left: 5px;
+}
+
+.flagIcon {
+  width: 35px;
+  height: 35px;
+  border-radius: 100px;
+}
+
+.countryContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.bottomPlayer {
+  background-image: url("https://thumbs.dreamstime.com/b/vertical-shot-road-magnificent-mountains-under-blue-sky-captured-california-163571053.jpg");
+  height: 300px;
+  width: 260px;
+  margin-top: 20px;
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  padding: 60px;
+  padding-bottom: 70px;
+}
+
+.playContainer {
+  display: flex;
+  justify-content: space-between;
+}

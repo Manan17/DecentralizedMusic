@@ -1,8 +1,149 @@
-.wrapper-row {
+.artistdashboard {
+  background-image: linear-gradient(to right, #3a353f, #2f332b, #182829);
+  padding: 20px;
+  color: white;
+  position: relative;
+}
+.headerText {
+  color: white;
+}
+
+.topContainer {
+  display: flex;
+}
+
+.icons {
+  width: 40px;
+  height: 30px;
+}
+
+.chartContainer {
+  background-color: #09031d;
+  width: 500px;
+  padding: 20px;
+  border-radius: 30px;
+}
+.headerIcons {
+  display: flex;
+  flex-direction: row;
+}
+
+.musicIcons {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  background-color: black;
-  height: 100%;
-  width: 100%;
+  align-items: "center";
+  margin-left: 50px;
+}
+
+.iconContainer {
+  margin-left: 10px;
+  text-align: center;
+}
+
+.smallText {
+  font-size: 12px;
+}
+
+.chartImage {
+  width: 450px;
+}
+
+.earningsContainer {
+  background-color: #09031d;
+  width: 300px;
+  border-radius: 20px;
+  padding: 20px;
+  margin-left: 100px;
+}
+
+.earningsHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.targetAudienceContainer {
+  background-color: #09031d;
+  width: 300px;
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.barChartImage {
+  width: 250px;
+}
+
+.bottomContainer {
+  display: flex;
+}
+
+.topreleasesContainer {
+  background-color: #09031d;
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 20px;
+  margin-left: 20px;
+  width: 580px;
+}
+
+.topHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.newreleasesButton {
+  margin-left: 20px;
+  padding: 8px;
+  padding-right: 10px;
+  padding-left: 20px;
+  background-color: #c1f741;
+  border: none;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.songImageMain {
+  display: flex;
+  margin-top: 20px;
+}
+
+.songImageContainer {
+  display: flex;
+  align-items: center;
+  width: 250px;
+  border-top: 1px solid lightgray;
+  padding: 7px 0;
+}
+
+.songImage {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.songTitle {
+  margin-bottom: 0;
+}
+
+.songPlays {
+  font-size: 13px;
+  color: gray;
+}
+
+.arrowIcon {
+  margin-left: 70px;
+}
+
+.songListContainer {
+  margin-left: 10px;
+}
+
+.rightNavBar {
+  position: absolute;
+  right: 0;
+  width: 300px;
+  background-color: #09031d;
+  top: 0;
 }
