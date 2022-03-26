@@ -1,5 +1,7 @@
 
-.carousel{
+.body{
+    background-color: #080808;
+}.carousel{
     height: 10fr;
     width: 65%;
     
@@ -9,12 +11,134 @@
     background-color: black;
     border-radius: 20px;
 }
-
+.trending{
+    margin-left: 10px;
+}
+.trendingimg{
+    height: 275px;
+    width: 40%;
+    border-radius: 20px;
+    margin-top: 40px;
+}
 .card{
-    margin: 5%;
+    margin: 5% 0%;
+        
 }
 
 #image{
     width: 100%;
+
 }
 
+Navbar{
+    border-bottom-right-radius: 10px ;
+}
+
+.button_trending_play{
+    margin-left: 20px;
+    padding: 8px;
+    padding-right: 10px;
+    padding-left: 20px;
+    background-color: white;
+    border: none;
+    font-weight: bold;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 45.7%;
+    right: 91%;
+    font-size: small;
+    text-align: center;
+    width: 6%;
+    height: 40px;
+}
+
+.button_trending_playlist{
+    margin-left: 20px;
+    padding: 8px;
+    padding-right: 10px;
+    padding-left: 20px;
+    background-color: #282828;
+    color: white;
+    border: none;
+    font-weight: bold;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 45.7%;
+    right: 82%;
+    font-size: small;
+    align-self: center;
+    width:fit-content;
+    height: 40px;
+    width: 8%;
+}
+.topreleasesContainer {
+    background-color: #09031d;
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 580px;
+  }
+  
+  .topHeader {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .newreleasesButton {
+    margin-left: 20px;
+    padding: 8px;
+    padding-right: 10px;
+    padding-left: 20px;
+    background-color: #c1f741;
+    border: none;
+    font-weight: bold;
+    border-radius: 10px;
+  }
+  
+  .songImageMain {
+    display: flex;
+    margin-top: 20px;
+  }
+  
+  .songImageContainer {
+    display: flex;
+    align-items: center;
+    width: 250px;
+    border-top: 1px solid lightgray;
+    padding: 7px 0;
+  }
+  
+  .songImage {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    margin-right: 20px;
+  }
+  
+  .songTitle {
+    margin-bottom: 0;
+  }
+  
+  .songPlays {
+    font-size: 13px;
+    color: gray;
+  }
+  
+  .arrowIcon {
+    margin-left: 70px;
+  }
+  
+  .songListContainer {
+    margin-left: 10px;
+  }
+  
+  .rightNavBar {
+    position: absolute;
+    right: 0;
+    width: 300px;
+    background-color: #09031d;
+    top: 0;
+    height: 100vh;
+  }
+  

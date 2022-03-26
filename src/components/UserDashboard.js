@@ -1,16 +1,12 @@
-
 import React from 'react'
 import './UserDashboard.css'
-import {Navbar,Nav,Form,FormControl,Button,Container,NavDropdown,Carousel,Card,CardGroup} from 'react-bootstrap'
-
-import image1 from "../images/image1.jpg"
-import image2 from "../images/image2.jpg"
-
-
+import {Navbar,Nav,NavDropdown,Form,FormControl,Container,Button} from 'react-bootstrap' 
+import imageT from '../images/trending.png'
+// import ChevronRightIcon from "@mui/icons-material";
 function UserDashboard() {
   return (
-        <>
-        <Navbar bg="light" expand="lg">
+    <div className='body'>
+      <Navbar bg="dark" variant="dark" expand="lg" >
   <Container fluid>
     <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
     <Navbar.Toggle aria-controls="navbarScroll" />
@@ -46,87 +42,116 @@ function UserDashboard() {
     </Navbar.Collapse>
   </Container>
 </Navbar>
+  
 
-
-
-{/* Carousel */}
-<div className='carousel'>
-<Carousel >
-  <Carousel.Item>
-    <img
-      className="d-block w-100"
-      src={image1}
-      alt="First slide"
-    />
+  <div className='trending'>
+  
+    <img className='trendingimg' src={imageT} alt='Trending'/>
+  </div>
+    <button className='button_trending_play' type='submit'>Play</button>
+    <button className='button_trending_playlist' type='submit'>View Playlist</button>
     
-  </Carousel.Item>
-  <Carousel.Item>
-    <img
-      className="d-block w-100"
-      src={image2}
-      alt="Second slide"
-    />
+    <div className="topreleasesContainer">
+          <div className="topHeader">
+            <h6>Top Releases</h6>
+            <div>
+              <h7>All Releases</h7>
+              <button className="newreleasesButton">+New Releases</button>
+            </div>
+          </div>
+          <div className="songImageMain">
+            <div>
+              <div className="songImageContainer">
+                <img
+                  className="songImage"
+                  src="https://express-images.franklymedia.com/5829/sites/13/2019/05/10101601/ed-idc1.jpg"
+                />
+                <div className="songInfo">
+                  <p className="songTitle">I Don't Care</p>
+                  <p className="songPlays">92k Plays</p>
+                </div>
+                <div className="arrowIcon">
+                  {/* <ChevronRightIcon /> */}
+                </div>
+              </div>
+              <div>
+                <div className="songImageContainer">
+                  <img
+                    className="songImage"
+                    src="https://express-images.franklymedia.com/5829/sites/13/2019/05/10101601/ed-idc1.jpg"
+                  />
+                  <div className="songInfo">
+                    <p className="songTitle">I Don't Care</p>
+                    <p className="songPlays">92k Plays</p>
+                  </div>
+                  <div className="arrowIcon">
+                    {/* <ChevronRightIcon /> */}
+                  </div>
+                </div>
+                <div className="songImageContainer">
+                  <img
+                    className="songImage"
+                    src="https://express-images.franklymedia.com/5829/sites/13/2019/05/10101601/ed-idc1.jpg"
+                  />
+                  <div className="songInfo">
+                    <p className="songTitle">I Don't Care</p>
+                    <p className="songPlays">92k Plays</p>
+                  </div>
+                  <div className="arrowIcon">
+                    {/* <ChevronRightIcon /> */}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="songListContainer">
+              <div className="songImageContainer">
+                <img
+                  className="songImage"
+                  src="https://express-images.franklymedia.com/5829/sites/13/2019/05/10101601/ed-idc1.jpg"
+                />
+                <div className="songInfo">
+                  <p className="songTitle">I Don't Care</p>
+                  <p className="songPlays">92k Plays</p>
+                </div>
+                <div className="arrowIcon">
+                  {/* <ChevronRightIcon /> */}
+                </div>
+              </div>
+              <div>
+                <div className="songImageContainer">
+                  <img
+                    className="songImage"
+                    src="https://express-images.franklymedia.com/5829/sites/13/2019/05/10101601/ed-idc1.jpg"
+                  />
+                  <div className="songInfo">
+                    <p className="songTitle">I Don't Care</p>
+                    <p className="songPlays">92k Plays</p>
+                  </div>
+                  <div className="arrowIcon">
+                    {/* <ChevronRightIcon /> */}
+                  </div>
+                </div>
+                <div className="songImageContainer">
+                  <img
+                    className="songImage"
+                    src="https://express-images.franklymedia.com/5829/sites/13/2019/05/10101601/ed-idc1.jpg"
+                  />
+                  <div className="songInfo">
+                    <p className="songTitle">I Don't Care</p>
+                    <p className="songPlays">92k Plays</p>
+                  </div>
+                  <div className="arrowIcon">
+                    {/* <ChevronRightIcon /> */}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
+  </div>
     
-  </Carousel.Item>
-  <Carousel.Item>
-    <img
-      className="d-block w-100"
-      src={image1}
-      alt="Third slide"
-    />
-
-  </Carousel.Item>
-</Carousel>
-</div>
-
-{/*cards*/}
-<div className='card'>
-<CardGroup>
-  <Card>
-    <Card.Img variant="top" src="holder.js/100px160" />
-    <Card.Body>
-      <Card.Title>Card title</Card.Title>
-      <Card.Text>
-        This is a wider card with supporting text below as a natural lead-in to
-        additional content. This content is a little bit longer.
-      </Card.Text>
-    </Card.Body>
-    <Card.Footer>
-      <small className="text-muted">Last updated 3 mins ago</small>
-    </Card.Footer>
-  </Card>
-  <Card>
-    <Card.Img variant="top" src="holder.js/100px160" />
-    <Card.Body>
-      <Card.Title>Card title</Card.Title>
-      <Card.Text>
-        This card has supporting text below as a natural lead-in to additional
-        content.{' '}
-      </Card.Text>
-    </Card.Body>
-    <Card.Footer>
-      <small className="text-muted">Last updated 3 mins ago</small>
-    </Card.Footer>
-  </Card>
-  <Card>
-    <Card.Img variant="top" src="holder.js/100px160" />
-    <Card.Body>
-      <Card.Title>Card title</Card.Title>
-      <Card.Text>
-        This is a wider card with supporting text below as a natural lead-in to
-        additional content. This card has even longer content than the first to
-        show that equal height action.
-      </Card.Text>
-    </Card.Body>
-    <Card.Footer>
-      <small className="text-muted">Last updated 3 mins ago</small>
-    </Card.Footer>
-  </Card>
-</CardGroup>
-</div>
-        </>
-
+    
   )
 }
 
