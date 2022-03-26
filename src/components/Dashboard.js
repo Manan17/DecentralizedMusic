@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Card, Button, Alert } from 'react-bootstrap';
 import { useAuth } from '../contexts/AuthContext';
 import { Link, useHistory } from 'react-router-dom';
-import { decode as base64_decode, encode as base64_encode } from 'base-64';
+import { encode as base64_encode } from 'base-64';
 
 export default function Dashboard() {
   const [error, setError] = useState('');
@@ -42,8 +42,8 @@ export default function Dashboard() {
           //Authorization: 'Bearer ' + tokenResponse.data.access_token,
         },
       }).then((playlistResponse) => {
-        console.log('playlist', playlistResponse.data.playlists.items);
-        setPlaylist(playlistResponse.data.playlists.items);
+        console.log('tracks', playlistResponse.data.tracks.items);
+        setPlaylist(playlistResponse.data.tracks.items);
       });
     });
   }, []);
