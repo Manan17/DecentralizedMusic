@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import { Form, Button, Card, Alert } from 'react-bootstrap';
 import { useAuth } from '../contexts/AuthContext';
 import { Link, useHistory } from 'react-router-dom';
-
+import "./Login.css";
 export default function Login() {
   const emailRef = useRef();
   const passwordRef = useRef();
@@ -45,7 +45,9 @@ export default function Login() {
               Log In as User
             </Button>
             <Button className="w-100 text-center mt-3">
-              <Link to="/Artist-Login">Artist Login</Link>
+              <Link to="/Artist-Login">
+                <h6 className='artistText'>Artist Login</h6>
+              </Link>
             </Button>
           </Form>
           <div className="w-100 text-center mt-3">
