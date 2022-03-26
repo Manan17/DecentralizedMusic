@@ -7,12 +7,7 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.26.1",
-<<<<<<< HEAD
     "bootstrap": "^5.1.3",
-=======
-    "base-64": "^1.0.0",
-    "bootstrap": "^4.6.1",
->>>>>>> aed51054bb9d344cdcbb32c3ac4c6f68b1f832d2
     "express": "^4.17.3",
     "firebase": "^7.24.0",
     "react": "^16.14.0",
