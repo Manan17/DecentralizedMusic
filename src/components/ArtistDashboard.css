@@ -1,0 +1,8 @@
+.wrapper-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: black;
+  height: 100%;
+  width: 100%;
+}
