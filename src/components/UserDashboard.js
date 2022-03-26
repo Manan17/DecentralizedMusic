@@ -6,8 +6,8 @@ import image2 from '../images/image2.jpg';
 
 function UserDashboard() {
   return (
-    <div className='container'>
-        <div className = 'Navbar'>
+      <>
+      <div className = 'Navbar'>
                     <Navbar bg="light" expand="lg">
             <Container fluid>
                 <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
@@ -45,6 +45,8 @@ function UserDashboard() {
             </Container>
             </Navbar>
         </div>
+    <div className='container'>
+        
         <div className='Bottom-container'>
 
             <div className='user-dashboard'>
@@ -79,6 +81,7 @@ function UserDashboard() {
             </div>
         </div>
     </div>
+    </>
   )
 }
 
