@@ -1,0 +1,16 @@
+.container {
+    margin: 0;
+    background-color: #ffff;
+}
+.navbar {
+    background-color: black;
+}
+.Bottom-container{
+    background-color: black;
+}
+.user-dashboard{
+    background-color: black;
+}
+.container-right{
+    background-color: darkgray
+}
