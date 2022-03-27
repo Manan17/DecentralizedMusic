@@ -1,20 +1,197 @@
-
-.carousel{
-    height: 10fr;
-    width: 65%;
-    
-    display: block;
-    margin-right: 30%;
-    margin-left: auto;
-    background-color: black;
-    border-radius: 20px;
+.body {
+  height: 100%;
+  width: 100%;
+  background-color: #080808;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.left {
+  flex-basis: 60%;
 }
 
-.card{
-    margin: 5%;
+.trending {
+  margin-left: 30px;
+}
+.trendingimg {
+  height: 320px;
+  width: 87%;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+.card {
+  margin: 5% 0%;
 }
 
-#image{
-    width: 100%;
+#image {
+  width: 100%;
 }
 
+Navbar {
+  border-bottom-right-radius: 10px;
+}
+
+.button_trending_play {
+  margin-left: 20px;
+  padding: 8px;
+  padding-right: 10px;
+  padding-left: 20px;
+  background-color: white;
+  border: none;
+  font-weight: bold;
+  border-radius: 20px;
+  position: absolute;
+  bottom: 33.5%;
+  right: 88.7%;
+  font-size: small;
+  text-align: center;
+  width: 6%;
+  height: 40px;
+}
+
+.button_trending_playlist {
+  margin-left: 20px;
+  padding: 8px;
+  padding-right: 10px;
+  padding-left: 20px;
+  background-color: #282828;
+  color: white;
+  border: none;
+  font-weight: bold;
+  border-radius: 20px;
+  position: absolute;
+  bottom: 33.5%;
+  right: 79.7%;
+  font-size: small;
+  align-self: center;
+  width: fit-content;
+  height: 40px;
+  width: 8%;
+}
+.topreleasesContainer {
+  background-color: #09031d;
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 20px;
+  margin-left: 20px;
+  width: 100%;
+}
+
+.topHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.newreleasesButton {
+  margin-left: 20px;
+  padding: 8px;
+  padding-right: 10px;
+  padding-left: 20px;
+  background-color: #c1f741;
+  border: none;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.songImageMain {
+  display: flex;
+  margin-top: 20px;
+}
+
+.songImageContainer {
+  display: flex;
+  align-items: center;
+  width: 250px;
+  border-top: 1px solid white;
+  padding: 7px 0;
+}
+
+.songImage {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.songTitle {
+  margin-bottom: 0;
+}
+
+.songPlays {
+  font-size: 13px;
+  color: gray;
+}
+
+.arrowIcon {
+  margin-left: 70px;
+}
+
+.songListContainer {
+  margin-left: 10px;
+}
+
+.rightNavBar {
+  position: absolute;
+  right: 0;
+  width: 300px;
+  background-color: #09031d;
+  top: 0;
+  height: 100vh;
+}
+.subH {
+  font-size: smaller;
+  color: lightgray;
+  margin-top: 20px;
+  margin-right: 480px;
+}
+.head {
+  font-size: large;
+  font-weight: bold;
+  color: #ffff;
+}
+.Artistcontain {
+  margin-right: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 10px;
+  align-content: stretch;
+  background-color: #101010;
+  border-radius: 20px;
+  padding: 1%;
+}
+.artistImg {
+  width: 60px;
+  height: 60px;
+  border-radius: 20px;
+}
+.rank {
+  color: gray;
+  font-size: large;
+}
+.Topreleasescontain {
+  margin-left: 30px;
+  display: flex;
+}
+.topreleases {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 10px;
+  align-content: stretch;
+  background-color: #101010;
+  border-radius: 20px;
+  padding: 1%;
+  height: 45px;
+  width: 90%;
+}
+.albumImage {
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+}
+
+.newartiststext {
+  color: white;
+  margin: 20px;
+}

@@ -1,3 +1,58 @@
-.artistText{
-    color:white !important;
+.artistText {
+  color: white !important;
+}
+.mainLogin {
+  display: flex;
+}
+.leftSide {
+  flex: 0.5;
+  background-color: #fda708;
+  height: 100vh;
+}
+.rightSide {
+  flex: 0.5;
+  background-color: #f6ffa4;
+}
+.gif {
+  height: 450px;
+}
+
+.nirvana {
+  color: white;
+  padding: 20px;
+}
+
+.logo {
+  width: 100px;
+}
+
+.topLogoHeader {
+  display: flex;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+.musicspeak {
+  color: white;
+  padding: 20px;
+  padding-left: 110px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.passwordButton {
+  margin-top: 20px;
+}
+
+.buttonStyle {
+  background-color: #d70030 !important;
+  border: none !important;
+}
+
+.bgyellow {
+  background-color: #f6ffa4 !important;
+  border: none !important;
+}
+
+.artistLeftSide {
+  flex: 0.5;
+  background-color: #dd4f5d;
+  height: 100vh;
 }

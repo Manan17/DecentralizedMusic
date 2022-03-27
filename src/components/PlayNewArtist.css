@@ -5,12 +5,27 @@
   padding: 10px;
   align-items: center;
   border-radius: 20px;
-  height: 200px;
+  height: 250px;
   width: 200px;
+  margin-bottom: 20px;
+  margin-right: 20px;
 }
 
 .audioImage {
   height: 110px;
   margin-bottom: 20px;
   border-radius: 20px;
+}
+
+.songNameText {
+  color: white;
+}
+
+.tipButton {
+  margin-top: 15px;
+  background-color: cadetblue;
+  border: none;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
 }

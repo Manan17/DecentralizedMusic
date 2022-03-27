@@ -89,7 +89,7 @@ export default function ArtistDashboard() {
                 <a
                   className="newReleasesText"
                   target="_blank"
-                  href="http://localhost:3000/"
+                  href="http://localhost:3002/"
                 >
                   +New Releases
                 </a>
