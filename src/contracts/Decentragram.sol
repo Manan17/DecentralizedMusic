@@ -38,7 +38,7 @@ contract Decentragram {
 
     imageCount++;
 
-    images[imageCount] = Image(imageCount,_imgHash,_description,0,msg.sender);
+    images[imageCount] = Image (imageCount,_imgHash,_description,0,msg.sender);
 
     emit ImageCreated(imageCount,_imgHash,_description,0,msg.sender);
   }

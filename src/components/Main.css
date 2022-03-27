@@ -1,0 +1,11 @@
+.uploadImageContainer{
+    padding-left: 100px;
+    padding-right: 100px;
+    background-image: linear-gradient(to right, #3a353f, #2f332b, #182829);
+    height: 100vh;  
+  color: white;
+}
+
+.inputField{
+    margin-bottom: 15px;
+}

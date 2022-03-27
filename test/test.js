@@ -1,95 +1,61 @@
 const { assert } = require('chai')
 
-const Decentragram = artifacts.require('./Decentragram.sol')
+const Music = artifacts.require('./Music.sol')
 
 require('chai')
   .use(require('chai-as-promised'))
   .should()
 
-contract('Decentragram', ([deployer, author, tipper]) => {
-  let decentragram
+contract('Music', ([deployer, author, tipper]) => {
+  let music
 
   before(async () => {
-    decentragram = await Decentragram.deployed()
+    music = await Music.deployed()
   })
-
   describe('deployment', async () => {
-    it('deploys successfully', async () => {
-      const address = await decentragram.address
+    it('deploys successfully' ,async () => {
+      const address = await music.address
       assert.notEqual(address, 0x0)
       assert.notEqual(address, '')
       assert.notEqual(address, null)
       assert.notEqual(address, undefined)
     })
-
-    it('has a name', async () => {
-      const name = await decentragram.name()
-      assert.equal(name, 'Decentragram')
-    })
   })
 
-  describe('images' , async () => {
-    let result,imageCount;
-    const hash = 'abc233';
+  describe('musicrecords', async () => {
+    let result,musicCount;
+    const hash = 'abc123';
+
     before(async () => {
-      result = await decentragram.uploadImage(hash,'Desc',{from : author})
-      imageCount = await decentragram.imageCount()
+      //musicHash,artistName,songName,albumName,songLength,lyrics,genre
+      result = await music.addToBlockchain(hash,'Manan','Hey YA', 'MananAlbum','2mins','hello','Sufi')
+      musicCount = await music.musicCount();
     })
 
-    it('creates images', async() => {
-      assert.equal(imageCount,1);
+    it('creates music', async() => {
+      assert.equal(musicCount,1);
       const event = result.logs[0].args;
-      assert.equal(event.id.toNumber(),imageCount.toNumber(),'id is correct');
-      assert.equal(event.hash,hash,'Hash is correct');
-      assert.equal(event.description, 'Desc','description is correct' );
-      assert.equal(event.tipAmount, 0,'tip amount is correct');
-      assert.equal(event.author, author, 'author is correct');
-
-      await decentragram.uploadImage('','Desc',{from : author}).should.be.rejected;
-      await decentragram.uploadImage('Hash','',{from : author}).should.be.rejected;
-    })
-
-    it('list images' , async () => {
-      const image = await decentragram.images(imageCount);
-      assert.equal(image.id.toNumber(),imageCount.toNumber(),'id is correct');
-      assert.equal(image.hash,hash,'Hash is correct');
-      assert.equal(image.description, 'Desc','description is correct' );
-      assert.equal(image.tipAmount, 0,'tip amount is correct');
-      assert.equal(image.author, author, 'author is correct');
-    })
-
-    it('allows users to tip images', async () => {
-      
-      let oldAuthorBalance
-      oldAuthorBalance = await web3.eth.getBalance(author)
-      oldAuthorBalance = new web3.utils.BN(oldAuthorBalance)
-
-      result = await decentragram.tipImageOwner(imageCount, { from: tipper, value: web3.utils.toWei('1', 'Ether') })
-
-      
-      const event = result.logs[0].args
-      assert.equal(event.id.toNumber(), imageCount.toNumber(), 'id is correct')
-      assert.equal(event.hash, hash, 'Hash is correct')
-      assert.equal(event.description, 'Desc', 'description is correct')
-      assert.equal(event.tipAmount, '1000000000000000000', 'tip amount is correct')
-      assert.equal(event.author, author, 'author is correct')
-
-      
-      let newAuthorBalance
-      newAuthorBalance = await web3.eth.getBalance(author)
-      newAuthorBalance = new web3.utils.BN(newAuthorBalance)
-
-      let tipImageOwner
-      tipImageOwner = web3.utils.toWei('1', 'Ether')
-      tipImageOwner = new web3.utils.BN(tipImageOwner)
-
-      const expectedBalance = oldAuthorBalance.add(tipImageOwner)
-
-      assert.equal(newAuthorBalance.toString(), expectedBalance.toString())
-
-      
-      await decentragram.tipImageOwner(99, { from: tipper, value: web3.utils.toWei('1', 'Ether')}).should.be.rejected;
-    })
+      assert.equal(event.id.toNumber(),musicCount.toNumber(),'id is correct');
+      assert.equal(event.musicHash,hash,'Hash is correct');
+      assert.equal(event.artistName, 'Manan','artist name is correct' );
+      assert.equal(event.songName,'Hey YA' ,'songName amount is correct');
+      assert.equal(event.albumName, 'MananAlbum', 'albumName is correct');
+      assert.equal(event.songLength,'2mins', 'song length is correct');
+      assert.equal(event.lyrics, 'hello',' lyrics are correct');
+      assert.equal(event.genre, 'Sufi', 'Genre correct');
   })
+  it('list music records' , async () => {
+      const event = await music.getAllMusicRecords();
+      console.log(event)
+      assert.equal(event[0][1],hash,'Hash is correct');
+      assert.equal(event[0][2], 'Manan','artist name is correct' );
+      assert.equal(event[0][3],'Hey YA' ,'songName amount is correct');
+      assert.equal(event[0][4], 'MananAlbum', 'albumName is correct');
+      assert.equal(event[0][6],'2mins', 'song length is correct');
+      assert.equal(event[0][7], 'hello',' lyrics are correct');
+      assert.equal(event[0][8], 'Sufi', 'Genre correct');
+    })
+
+}) 
 
 })
