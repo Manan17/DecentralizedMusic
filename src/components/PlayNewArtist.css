@@ -1,0 +1,16 @@
+.audioCard {
+  display: flex;
+  flex-direction: column;
+  background-color: #09031d;
+  padding: 10px;
+  align-items: center;
+  border-radius: 20px;
+  height: 200px;
+  width: 200px;
+}
+
+.audioImage {
+  height: 110px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+}

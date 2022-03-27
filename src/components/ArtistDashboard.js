@@ -85,7 +85,15 @@ export default function ArtistDashboard() {
             <h6>Top Releases</h6>
             <div>
               <h7>All Releases</h7>
-              <button className="newreleasesButton">+New Releases</button>
+              <button className="newreleasesButton">
+                <a
+                  className="newReleasesText"
+                  target="_blank"
+                  href="http://localhost:3000/"
+                >
+                  +New Releases
+                </a>
+              </button>
             </div>
           </div>
           <div className="songImageMain">

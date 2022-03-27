@@ -1,10 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import "./RightNavbar.css";
 import linegraph from "../assets/smallgraph.png";
 import PauseIcon from "@mui/icons-material/Pause";
 import SkipNextIcon from "@mui/icons-material/SkipNext";
 import SkipPreviousIcon from "@mui/icons-material/SkipPrevious";
+import PlayCircleOutlineIcon from "@mui/icons-material/PlayCircleOutline";
 function RightNavbar() {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [audio, setAudio] = useState(null);
+  const playMusic = (musicHash) => {
+    const audio = new Audio(
+      `https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3`
+    );
+    setAudio(audio);
+    if (!isPlaying) {
+      audio.play();
+    }
+    setIsPlaying(!isPlaying);
+  };
+  const stopMusic = (audio) => {
+    audio.pause();
+    setIsPlaying(!isPlaying);
+  };
   return (
     <div className="mainContainer">
       <div className="topProfile">
@@ -62,7 +79,15 @@ function RightNavbar() {
         </progress>
         <div className="playContainer">
           <SkipPreviousIcon />
-          <PauseIcon />
+          {!isPlaying ? (
+            <PlayCircleOutlineIcon
+              onClick={() =>
+                playMusic("QmcAqfE8V6WGT5fqNMWG9hprbm8etgsm7ZCL2zeZ7gtohx")
+              }
+            />
+          ) : (
+            <PauseIcon onClick={() => stopMusic(audio)} />
+          )}
           <SkipNextIcon />
         </div>
       </div>
